@@ -11,16 +11,22 @@
         android:theme="@style/Theme.Tamagochi"
         android:windowSoftInputMode="stateVisible|adjustResize">
         <activity
-            android:name=".SignInActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".MainScreenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

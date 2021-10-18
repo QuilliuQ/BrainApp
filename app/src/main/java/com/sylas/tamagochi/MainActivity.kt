@@ -39,10 +39,10 @@ class MainActivity : AppCompatActivity() {
                     AlertDialog.Builder(this)
                         .setTitle("Поздравляем")
                         .setMessage("Вы успешно зарегистрировались")
-                        .setPositiveButton("OK",{_,_ ->
-                            val intent = Intent(this,SignInActivity::class.java)
+                        .setPositiveButton("OK") { _, _ ->
+                            val intent = Intent(this, SignInActivity::class.java)
                             startActivity(intent)
-                        } )
+                        }
                         .create()
                         .show()
 
