@@ -10,4 +10,5 @@
     <color name="actiongreen">#7C9A92</color>
     <color name="backgroundgreen">#253334</color>
     <color name="editgray">#BEC2C2</color>
+    <color name="state_color">#253334</color>
 </resources>

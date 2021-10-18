@@ -7,13 +7,19 @@
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/buttoncorner.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/buttonmedcorner.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/edittextborder.xml" value="0.3015625" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/feelings_background.xml" value="0.1962962962962963" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/ic_logo__4_.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/ic_nav.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/ic_profile.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/state_background.xml" value="0.1962962962962963" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/state_buttoncorner.xml" value="0.1962962962962963" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/activity_main_screen.xml" value="0.33" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/feeelings_recycler_item.xml" value="1.0" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/fragment_dashboard.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/state_recycler_item.xml" value="0.39335664335664333" />
         <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27239583333333334" />
       </map>
     </option>
