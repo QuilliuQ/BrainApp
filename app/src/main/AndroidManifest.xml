@@ -11,9 +11,12 @@
         android:theme="@style/Theme.Tamagochi"
         android:windowSoftInputMode="stateVisible|adjustResize">
         <activity
+            android:name=".CurrentImageActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainScreenActivity"
             android:exported="true"
-            android:label="@string/title_activity_main_screen" >
+            android:label="@string/title_activity_main_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,9 +28,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

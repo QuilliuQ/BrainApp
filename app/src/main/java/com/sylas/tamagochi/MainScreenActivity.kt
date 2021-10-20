@@ -28,7 +28,7 @@ class MainScreenActivity : AppCompatActivity() {
         val exitText: TextView = findViewById(R.id.exit)
         exitText.visibility = View.GONE
         val navView: BottomNavigationView = binding.navView
-        navView.setOnNavigationItemReselectedListener { menu ->
+        navView.setOnNavigationItemSelectedListener { menu ->
             when (menu.itemId){
                 R.id.navigation_profile -> {
                     avatar.visibility = View.GONE
@@ -37,14 +37,16 @@ class MainScreenActivity : AppCompatActivity() {
                 else -> {   avatar.visibility = View.VISIBLE
                     exitText.visibility = View.GONE }
             }
+            return@setOnNavigationItemSelectedListener true
         }
         navController = findNavController(R.id.nav_host_fragment_activity_main_screen)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         navView.setupWithNavController(navController)
+
     }
 
     fun profileClick(view: android.view.View) {
-        navController.navigate(R.id.action_navigation_home_to_navigation_profile)
+
     }
 }

@@ -1,20 +1,24 @@
-package com.sylas.tamagochi.ui.notifications
+package com.sylas.tamagochi.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.sylas.tamagochi.R
 import com.sylas.tamagochi.databinding.FragmentProfileBinding
 
-class NotificationsFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+
     private var _binding: FragmentProfileBinding? = null
+    val list : ArrayList<ImageProfileItem> = arrayListOf(
+        ImageProfileItem(R.drawable.imageone,"11:00"),
+        ImageProfileItem(R.drawable.imagetwo,"15:00"),
+    )
+
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,12 +29,10 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
-
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+        val recyclerView:RecyclerView = root.findViewById(R.id.imageProfileList)
+        recyclerView.adapter = ImagesProfileAdapter(list,requireContext())
 
         return root
     }
