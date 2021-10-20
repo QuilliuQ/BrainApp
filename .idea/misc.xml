@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/buttoncorner.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/buttonmedcorner.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/edittextborder.xml" value="0.3015625" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/feelings_background.xml" value="0.1962962962962963" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/ic_logo__4_.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/ic_nav.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/ic_profile.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/state_background.xml" value="0.1962962962962963" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/drawable/state_buttoncorner.xml" value="0.1962962962962963" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/activity_main_screen.xml" value="0.33" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/feeelings_recycler_item.xml" value="1.0" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/fragment_dashboard.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/layout/state_recycler_item.xml" value="0.39335664335664333" />
+        <entry key="..\:/Users/sylas/AndroidStudioProjects/Tamagochi/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27239583333333334" />
+        <entry key="app/src/main/res/drawable/buttonmedcorner.xml" value="0.3984375" />
+        <entry key="app/src/main/res/drawable/images_recycler_corners.xml" value="0.3984375" />
+        <entry key="app/src/main/res/layout/activity_main_screen.xml" value="0.3707865168539326" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.6132208157524613" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3707865168539326" />
+        <entry key="app/src/main/res/layout/images_recycler_item.xml" value="0.3707865168539326" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3707865168539326" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11 (2)" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
