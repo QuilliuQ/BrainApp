@@ -43,10 +43,8 @@ class MainScreenActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         navView.setupWithNavController(navController)
-
     }
 
     fun profileClick(view: android.view.View) {
-
     }
 }
