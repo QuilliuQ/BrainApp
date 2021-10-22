@@ -5,5 +5,6 @@ data class AuthResponse(
     val email: String,
     val avatar: String,
     val token: String,
-    val nickName:String
+    val nickName:String,
+
 )

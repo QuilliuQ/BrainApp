@@ -1,14 +1,18 @@
 package com.sylas.tamagochi
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.gson.Gson
 import com.sylas.tamagochi.api.MeditationAPI
 import com.sylas.tamagochi.api.RetrofitBuilder
 import com.sylas.tamagochi.model.AuthResponse
+import com.sylas.tamagochi.model.ErrorResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,12 +20,14 @@ import retrofit2.Response
 class SignInActivity : AppCompatActivity() {
     lateinit var email:EditText
     lateinit var password:EditText
+    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
         email = findViewById(R.id.authEmailEditText)
         password = findViewById(R.id.authPasswordEditText)
+        sharedPreferences = getSharedPreferences("main", MODE_PRIVATE)
     }
 
     fun auth(view: android.view.View) {
@@ -41,13 +47,17 @@ class SignInActivity : AppCompatActivity() {
                         response: Response<AuthResponse>
                     ) {
                        if(response.isSuccessful){
+                            val editor = sharedPreferences.edit()
+                           editor.putString("avatar",response.body()?.avatar)
+                           editor.putString("nickName",response.body()?.nickName)
+                           editor.putString("token",response.body()?.token)
+                           editor.apply()
                             val intent  = Intent(this@SignInActivity,MainScreenActivity::class.java)
-                            intent.putExtra("nickName",response.body()?.nickName)
-                            intent.putExtra("avatar",response.body()?.avatar)
                            startActivity(intent)
                        }
                        else{
-                           Toast.makeText(this@SignInActivity, response.errorBody().toString(), Toast.LENGTH_SHORT).show()
+                           val gson = Gson().fromJson(response.errorBody()?.string(),ErrorResponse::class.java)
+                           Toast.makeText(this@SignInActivity,gson.error, Toast.LENGTH_SHORT).show()
                        }
 
 

@@ -26,6 +26,7 @@
         <entry key="app/src/main/res/layout/activity_current_image.xml" value="0.36976506639427986" />
         <entry key="app/src/main/res/layout/activity_main_screen.xml" value="0.3707865168539326" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.36976506639427986" />
+        <entry key="app/src/main/res/layout/feeelings_recycler_item.xml" value="1.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.6132208157524613" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3707865168539326" />
         <entry key="app/src/main/res/layout/images_recycler_item.xml" value="0.3707865168539326" />

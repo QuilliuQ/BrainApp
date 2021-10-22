@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.sylas.tamagochi.R
+import com.sylas.tamagochi.model.FeelingsItem
 
 class FeelingsRecyclerAdapter(val list:ArrayList<FeelingsItem>,val context:Context): RecyclerView.Adapter<FeelingsRecyclerAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -21,8 +23,8 @@ class FeelingsRecyclerAdapter(val list:ArrayList<FeelingsItem>,val context:Conte
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.image.setImageResource(list[position].image)
-        holder.feelingsText.text = list[position].text
+        Glide.with(context).load(list[position].image).into(holder.image)
+        holder.feelingsText.text = list[position].title
     }
 
     override fun getItemCount(): Int {

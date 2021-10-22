@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.bumptech.glide.Glide
 import com.sylas.tamagochi.databinding.ActivityMainScreenBinding
 
 class MainScreenActivity : AppCompatActivity() {
@@ -21,10 +22,12 @@ class MainScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val sharedPreferences = getSharedPreferences("main", MODE_PRIVATE)
         val avatar: ImageView = findViewById(R.id.avatar)
+        val avatarURL = sharedPreferences.getString("avatar","http://mskko2021.mad.hakta.pro/uploads/files/racoon.jpg")
+        Glide.with(this).load(avatarURL).circleCrop().into(avatar)
         val exitText: TextView = findViewById(R.id.exit)
         exitText.visibility = View.GONE
         val navView: BottomNavigationView = binding.navView

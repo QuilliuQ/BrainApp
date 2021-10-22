@@ -1,12 +1,16 @@
 package com.sylas.tamagochi.ui.profile
 
+import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.sylas.tamagochi.R
 import com.sylas.tamagochi.databinding.FragmentProfileBinding
 
@@ -31,6 +35,11 @@ class ProfileFragment : Fragment() {
     ): View? {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        val avatar : ImageView = root.findViewById(R.id.profileAvatar)
+        val nickName : TextView = root.findViewById(R.id.profileNickName)
+        val sharedPreferences = activity?.getSharedPreferences("main",MODE_PRIVATE)
+        nickName.text = sharedPreferences?.getString("nickName","Default")
+        Glide.with(this).load(sharedPreferences?.getString("avatar","")).circleCrop().into(avatar)
         val recyclerView:RecyclerView = root.findViewById(R.id.imageProfileList)
         recyclerView.adapter = ImagesProfileAdapter(list,requireContext())
 

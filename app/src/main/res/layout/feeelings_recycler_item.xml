@@ -16,6 +16,7 @@
         android:fontFamily="@font/alegreya_regular"
         android:maxLines="1"
         android:text="Спокойный"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +35,8 @@
 
         <ImageView
             android:id="@+id/feelings_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_calm___icon" />
