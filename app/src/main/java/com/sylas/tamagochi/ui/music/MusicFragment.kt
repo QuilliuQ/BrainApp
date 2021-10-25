@@ -1,4 +1,4 @@
-package com.sylas.tamagochi.ui.dashboard
+package com.sylas.tamagochi.ui.music
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,14 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 import com.sylas.tamagochi.R
 import com.sylas.tamagochi.databinding.FragmentMusicBinding
 
-class DashboardFragment : Fragment() {
+class MusicFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+
     private var _binding: FragmentMusicBinding? = null
 
     // This property is only valid between onCreateView and
@@ -25,16 +27,13 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentMusicBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val viewPager: ViewPager = root.findViewById(R.id.view_pager)
+        val tabs : TabLayout = root.findViewById(R.id.tabs)
+        viewPager.adapter = MusicSectionPagerAdapter(parentFragmentManager)
+        tabs.setupWithViewPager(viewPager)
         return root
     }
 

@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_music"
-        android:name="com.sylas.tamagochi.ui.dashboard.DashboardFragment"
+        android:name="com.sylas.tamagochi.ui.music.MusicFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_music" />
 
