@@ -1,5 +1,6 @@
 package com.sylas.tamagochi
 
+import android.media.MediaPlayer
 import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
