@@ -8,14 +8,16 @@
     tools:context=".ui.music.MusicFragment" >
 
     <com.google.android.material.tabs.TabLayout
-        android:layout_width="409dp"
         android:id="@+id/tabs"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@color/backgroundgreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="@color/actiongreen"
+        app:tabTextColor="@color/actiongreen">
 
     </com.google.android.material.tabs.TabLayout>
     <androidx.viewpager.widget.ViewPager

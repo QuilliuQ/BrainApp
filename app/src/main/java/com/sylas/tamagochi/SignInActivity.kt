@@ -13,6 +13,7 @@ import com.sylas.tamagochi.api.MeditationAPI
 import com.sylas.tamagochi.api.RetrofitBuilder
 import com.sylas.tamagochi.model.AuthResponse
 import com.sylas.tamagochi.model.ErrorResponse
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -57,6 +58,7 @@ class SignInActivity : AppCompatActivity() {
                        }
                        else{
                            val gson = Gson().fromJson(response.errorBody()?.string(),ErrorResponse::class.java)
+                           
                            Toast.makeText(this@SignInActivity,gson.error, Toast.LENGTH_SHORT).show()
                        }
 
@@ -106,3 +108,5 @@ class SignInActivity : AppCompatActivity() {
 
     }
 }
+
+

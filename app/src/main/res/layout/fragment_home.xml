@@ -89,6 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/alegreya_regular"
         android:text="C возвращением, Эмиль!"
         android:textColor="@color/white"

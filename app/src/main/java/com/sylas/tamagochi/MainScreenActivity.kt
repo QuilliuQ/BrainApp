@@ -26,9 +26,7 @@ class MainScreenActivity : AppCompatActivity() {
         binding = ActivityMainScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val sharedPreferences = getSharedPreferences("main", MODE_PRIVATE)
-        val avatar: ImageView = findViewById(R.id.avatar)
-        val avatarURL = sharedPreferences.getString("avatar","http://mskko2021.mad.hakta.pro/uploads/files/racoon.jpg")
-        Glide.with(this).load(avatarURL).circleCrop().into(avatar)
+
         val navView: BottomNavigationView = binding.navView
         navController = findNavController(R.id.nav_host_fragment_activity_main_screen)
         // Passing each menu ID as a set of Ids because each

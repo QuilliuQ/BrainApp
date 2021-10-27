@@ -1,16 +1,14 @@
 package com.sylas.tamagochi.ui.music
 
-import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.PagerAdapter
-import com.sylas.tamagochi.ui.music.fragments.BestFragment
 import com.sylas.tamagochi.ui.music.fragments.FavouritesFragment
 import com.sylas.tamagochi.ui.music.fragments.NewFragment
+import com.sylas.tamagochi.ui.music.fragments.AllFragment
 
 class MusicSectionPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
-    val listTitle = arrayListOf<String>("Новинки","Избранное","Лучшее")
+    val listTitle = arrayListOf<String>("Все","Новинки","Избранное")
 
     override fun getPageTitle(position: Int): CharSequence? {
         return listTitle[position]
@@ -18,10 +16,10 @@ class MusicSectionPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         when(position){
-            0-> return NewFragment()
-            1-> return FavouritesFragment()
-            2-> return BestFragment()
-            else -> return NewFragment()
+            0-> return AllFragment()
+            1-> return NewFragment()
+            2-> return FavouritesFragment()
+            else -> return AllFragment()
         }
     }
 

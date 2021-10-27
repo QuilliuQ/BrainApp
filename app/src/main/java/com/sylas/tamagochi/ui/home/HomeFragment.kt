@@ -6,10 +6,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.sylas.tamagochi.R
 import com.sylas.tamagochi.api.MeditationAPI
 import com.sylas.tamagochi.api.RetrofitBuilder
@@ -48,6 +51,12 @@ class HomeFragment : Fragment() {
         quotesRecyclerView = root.findViewById(R.id.statesRecyclerView)
         val retrofitBuilder = RetrofitBuilder().getRetrofit()
         api = retrofitBuilder.create(MeditationAPI::class.java)
+        val avatar : ImageView = root.findViewById(R.id.avatar)
+        val avatarURL = sharedPreferences?.getString("avatar","http://mskko2021.mad.hakta.pro/uploads/files/racoon.jpg")
+        Glide.with(this).load(avatarURL).circleCrop().into(avatar)
+        avatar.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_navigation_profile)
+        }
         getFeel()
         getQuotes()
 
@@ -93,9 +102,7 @@ class HomeFragment : Fragment() {
         })
     }
 
-    fun profileClick(view: android.view.View) {
 
-    }
 
 
     override fun onDestroyView() {
