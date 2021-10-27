@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.FitCenter
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.sylas.tamagochi.R
 
@@ -29,7 +30,7 @@ class NewMusicRecyclerAdapter(val context: Context,val list: List<MusicItem>): R
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.artistName.text = list[position].artistName
         holder.songName.text = list[position].songName
-        Glide.with(context).load(list[position].poster).transform(CenterCrop(),RoundedCorners(15)).into(holder.poster)
+        Glide.with(context).load(list[position].poster).transform(FitCenter(),RoundedCorners(15)).into(holder.poster)
         if(list[position].liked!!){
             holder.like.setImageResource(R.drawable.ic_baseline_favorite_24)
         }

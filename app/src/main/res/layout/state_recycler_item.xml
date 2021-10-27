@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/title_quotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/description_quotes"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/alegreya_regular"
@@ -37,11 +37,11 @@
             android:text="Кратенькое описание блока с двумя строчками"
             android:textColor="@color/black"
             android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintStart_toStartOf="@+id/title_quotes"
+            app:layout_constraintTop_toBottomOf="@+id/title_quotes" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button3"
+            android:id="@+id/more"
             android:layout_width="138dp"
             android:layout_height="39dp"
             android:layout_marginTop="16dp"
@@ -49,11 +49,11 @@
             android:text="подробнее"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintStart_toStartOf="@+id/description_quotes"
+            app:layout_constraintTop_toBottomOf="@+id/description_quotes" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/image_quotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"

@@ -29,26 +29,12 @@ class MainScreenActivity : AppCompatActivity() {
         val avatar: ImageView = findViewById(R.id.avatar)
         val avatarURL = sharedPreferences.getString("avatar","http://mskko2021.mad.hakta.pro/uploads/files/racoon.jpg")
         Glide.with(this).load(avatarURL).circleCrop().into(avatar)
-        val exitText: TextView = findViewById(R.id.exit)
-        exitText.visibility = View.GONE
         val navView: BottomNavigationView = binding.navView
-        navView.setOnNavigationItemSelectedListener { menu ->
-            when (menu.itemId){
-                R.id.navigation_profile -> {
-                    avatar.visibility = View.GONE
-                    exitText.visibility = View.VISIBLE
-                }
-                else -> {   avatar.visibility = View.VISIBLE
-                    exitText.visibility = View.GONE }
-            }
-            return@setOnNavigationItemSelectedListener true
-        }
         navController = findNavController(R.id.nav_host_fragment_activity_main_screen)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         navView.setupWithNavController(navController)
     }
 
-    fun profileClick(view: android.view.View) {
-    }
+
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sylas.tamagochi" >
+    package="com.sylas.tamagochi">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tamagochi"
         android:usesCleartextTraffic="true"
-        android:windowSoftInputMode="stateVisible|adjustResize" >
+        android:windowSoftInputMode="stateVisible|adjustResize">
         <activity
-            android:name=".MainActivity2"
+            android:name=".CurrentQuotesActivity"
             android:exported="false"
-            android:label="@string/title_activity_main2"
+            android:label="@string/title_activity_current_quotes"
             android:theme="@style/Theme.Tamagochi.NoActionBar" />
         <activity
             android:name=".CurrentImageActivity"
@@ -24,16 +24,16 @@
         <activity
             android:name=".MainScreenActivity"
             android:exported="true"
-            android:label="@string/title_activity_main_screen" />
-        <activity
-            android:name=".SignInActivity"
-            android:exported="true" >
+            android:label="@string/title_activity_main_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

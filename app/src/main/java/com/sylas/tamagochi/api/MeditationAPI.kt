@@ -2,6 +2,7 @@ package com.sylas.tamagochi.api
 
 import com.sylas.tamagochi.model.AuthResponse
 import com.sylas.tamagochi.model.FeelingsResponse
+import com.sylas.tamagochi.model.QuotesResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -15,6 +16,8 @@ interface MeditationAPI {
     @GET("feelings")
     fun getFeelings(): Call<FeelingsResponse>
 
+    @GET("quotes")
+    fun getQuotes():Call<QuotesResponse>
 
 
 }
