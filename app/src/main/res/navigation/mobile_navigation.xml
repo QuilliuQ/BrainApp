@@ -26,4 +26,9 @@
         android:name="com.sylas.tamagochi.ui.profile.ProfileFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_maps"
+        android:name="com.sylas.tamagochi.ui.maps.MapsFragment"
+        android:label="maps_fragment"
+        tools:layout="@layout/maps_fragment" />
 </navigation>

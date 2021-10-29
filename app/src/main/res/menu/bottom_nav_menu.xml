@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_profile"
         android:title="@string/title_notifications" />
 
+    <item
+        android:id="@+id/navigation_maps"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:title="Map" />
+
 </menu>
